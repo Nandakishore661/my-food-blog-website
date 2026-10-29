@@ -1,0 +1,411 @@
+
+/* Google font used by the original template */
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: "Karma", Georgia, serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Fixed top navigation */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.menu-button,
+.brand,
+.mail-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 24px;
+    font-size: 22px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.menu-button:hover,
+.brand:hover,
+.mail-link:hover {
+    background: #ccc;
+}
+
+.brand {
+    flex: 1;
+}
+
+.mail-link {
+    font-size: 20px;
+}
+
+/* CSS-only sidebar */
+.menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    width: 40%;
+    min-width: 300px;
+    max-width: 450px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 3px 0 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(-110%);
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:checked ~ .sidebar {
+    transform: translateX(0);
+}
+
+.sidebar-link {
+    display: block;
+    width: 100%;
+    padding: 20px 24px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.sidebar-link:hover {
+    background: #ccc;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.menu-toggle:checked ~ .sidebar-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Main page container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    padding-top: 100px;
+}
+
+/* Four-column food gallery */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px 16px;
+    text-align: center;
+}
+
+.food-card {
+    min-width: 0;
+}
+
+.food-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.food-card h2 {
+    margin: 10px 0;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.food-card p {
+    margin: 12px 0;
+    font-size: 15px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 42px 0 32px;
+}
+
+.pagination a {
+    min-width: 40px;
+    height: 40px;
+    padding: 8px 13px;
+    text-align: center;
+    font-size: 15px;
+    transition: background 0.2s ease;
+}
+
+.pagination a:hover,
+.pagination a.active {
+    background: #000;
+    color: #fff;
+}
+
+/* Horizontal separators */
+.divider {
+    margin: 24px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+/* About section */
+.about-section {
+    text-align: center;
+    padding: 24px 0 32px;
+}
+
+.about-section > h2 {
+    margin: 15px 0 32px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.chef-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.about-text {
+    padding: 30px 0 10px;
+    text-align: center;
+}
+
+.about-text h3 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.about-text h4 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    max-width: 1050px;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+/* Footer columns */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    padding: 24px 0 40px;
+}
+
+.footer-column h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.footer-column p {
+    margin-bottom: 14px;
+}
+
+.footer-column a {
+    text-decoration: underline;
+}
+
+.footer-column a:hover {
+    color: #666;
+}
+
+/* Blog post list */
+.blog-posts {
+    list-style: none;
+}
+
+.blog-posts li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 8px;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.2s ease;
+}
+
+.blog-posts li:hover {
+    background: #ccc;
+}
+
+.blog-posts li img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.blog-posts li div {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-title {
+    font-size: 18px;
+}
+
+.post-description {
+    font-size: 15px;
+}
+
+/* Popular tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 5px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #616161;
+    color: #fff;
+    font-size: 12px;
+}
+
+.tag.featured {
+    padding: 3px 9px;
+    background: #000;
+    font-size: 15px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .food-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 18px;
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-column:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .topbar {
+        height: 60px;
+    }
+
+    .menu-button,
+    .brand,
+    .mail-link {
+        padding: 0 13px;
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 80px 12px 0;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 12px;
+    }
+
+    .food-card h2 {
+        font-size: 20px;
+    }
+
+    .food-card p {
+        font-size: 14px;
+    }
+
+    .pagination {
+        margin: 32px 0 24px;
+    }
+
+    .pagination a {
+        min-width: 32px;
+        padding: 8px;
+    }
+
+    .about-section {
+        padding-top: 16px;
+    }
+
+    .about-section > h2 {
+        font-size: 22px;
+    }
+
+    .about-text {
+        padding-top: 24px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-column:last-child {
+        grid-column: auto;
+    }
+
+    .sidebar {
+        width: 80%;
+        min-width: 0;
+    }
+}

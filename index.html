@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Food - Food Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CSS-only sidebar toggle -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <div class="sidebar">
+        <label for="menu-toggle" class="sidebar-link">Close Menu</label>
+        <a href="#food" class="sidebar-link">Food</a>
+        <a href="#about" class="sidebar-link">About</a>
+    </div>
+
+    <label for="menu-toggle" class="sidebar-overlay"></label>
+
+    <!-- Top Navigation -->
+    <header class="topbar">
+        <label for="menu-toggle" class="menu-button" aria-label="Open menu">☰</label>
+        <a href="#" class="brand">My Food</a>
+        <a href="#footer" class="mail-link">Mail</a>
+    </header>
+
+    <main class="container">
+
+        <!-- Food Gallery -->
+        <section id="food" class="food-grid">
+
+            <article class="food-card">
+                <img src="https://www.w3schools.com/w3images/sandwich.jpg"
+                     alt="Sandwich">
+                <h2>The Perfect Sandwich, A Real NYC Classic</h2>
+                <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </article>
+
+            <article class="food-card">
+                <img src="https://www.w3schools.com/w3images/steak.jpg"
+                     alt="Steak">
+                <h2>Let Me Tell You About This Steak</h2>
+                <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </article>
+
+            <article class="food-card">
+                <img src="https://www.w3schools.com/w3images/cherries.jpg"
+                     alt="Cherries">
+                <h2>Cherries, Interrupted</h2>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                <p>What else?</p>
+            </article>
+
+            <article class="food-card">
+                <img src="https://www.w3schools.com/w3images/wine.jpg"
+                     alt="Pasta and Wine">
+                <h2>Once Again, Robust Wine and Vegetable Pasta</h2>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </article>
+
+            <article class="food-card">
+                <img src="https://www.w3schools.com/w3images/popsicle.jpg"
+                     alt="Popsicle">
+                <h2>All I Need Is a Popsicle</h2>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </article>
+
+            <article class="food-card">
+                <img src="https://www.w3schools.com/w3images/salmon.jpg"
+                     alt="Salmon">
+                <h2>Salmon For Your Skin</h2>
+                <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </article>
+
+            <article class="food-card">
+                <img src="https://www.w3schools.com/w3images/sandwich.jpg"
+                     alt="Sandwich">
+                <h2>The Perfect Sandwich, A Real Classic</h2>
+                <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </article>
+
+            <article class="food-card">
+                <img src="https://www.w3schools.com/w3images/croissant.jpg"
+                     alt="Croissant">
+                <h2>Le French</h2>
+                <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </article>
+
+        </section>
+
+        <!-- Pagination -->
+        <nav class="pagination" aria-label="Food blog pages">
+            <a href="#food" aria-label="Previous page">«</a>
+            <a href="#food" class="active">1</a>
+            <a href="#food">2</a>
+            <a href="#food">3</a>
+            <a href="#food">4</a>
+            <a href="#food" aria-label="Next page">»</a>
+        </nav>
+
+        <hr class="divider" id="about">
+
+        <!-- About Me -->
+        <section class="about-section">
+            <h2>About Me, The Food Man</h2>
+
+            <img class="chef-image"
+                 src="https://www.w3schools.com/w3images/chef.jpg"
+                 alt="The Food Man">
+
+            <div class="about-text">
+                <h3>I am Who I Am!</h3>
+                <h4>With Passion For Real, Good Food</h4>
+
+                <p>
+                    Just me, myself and I, exploring the universe of
+                    unknownment. I have a heart of love and an interest
+                    in lorem ipsum and mauris neque quam blog. I want
+                    to share my world with you. Praesent tincidunt sed
+                    tellus ut rutrum. Sed vitae justo condimentum,
+                    porta lectus vitae, ultricies congue gravida diam
+                    non fringilla.
+                </p>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+
+            <section class="footer-column">
+                <h2>FOOTER</h2>
+                <p>
+                    Praesent tincidunt sed tellus ut rutrum. Sed vitae
+                    justo condimentum, porta lectus vitae, ultricies
+                    congue gravida diam non fringilla.
+                </p>
+                <p>
+                    Powered by
+                    <a href="https://www.w3schools.com/w3css/default.asp">
+                        w3.css
+                    </a>
+                </p>
+            </section>
+
+            <section class="footer-column">
+                <h2>BLOG POSTS</h2>
+
+                <ul class="blog-posts">
+                    <li>
+                        <img src="https://www.w3schools.com/w3images/workshop.jpg"
+                             alt="Workshop">
+                        <div>
+                            <span class="post-title">Lorem</span>
+                            <span class="post-description">Sed mattis nunc</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="https://www.w3schools.com/w3images/gondol.jpg"
+                             alt="Gondola">
+                        <div>
+                            <span class="post-title">Ipsum</span>
+                            <span class="post-description">Praes tinci sed</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="footer-column">
+                <h2>POPULAR TAGS</h2>
+
+                <div class="tags">
+                    <span class="tag featured">Travel</span>
+                    <span class="tag">New York</span>
+                    <span class="tag">Dinner</span>
+                    <span class="tag">Salmon</span>
+                    <span class="tag">France</span>
+                    <span class="tag">Drinks</span>
+                    <span class="tag">Ideas</span>
+                    <span class="tag">Flavors</span>
+                    <span class="tag">Cuisine</span>
+                    <span class="tag">Chicken</span>
+                    <span class="tag">Dressing</span>
+                    <span class="tag">Fried</span>
+                    <span class="tag">Fish</span>
+                    <span class="tag">Duck</span>
+                </div>
+            </section>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
